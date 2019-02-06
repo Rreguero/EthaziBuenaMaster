@@ -22,7 +22,7 @@ import java.sql.SQLException;
 	    public DB(String baseDatos){
 	    	
 	    	
-	    	String fichero = "../Ethazi3/src/Modelo/Fitxero";
+	    	String fichero = "../AutobusTxartela/src/Modelo/Fitxero";
 	    	
 	    	
     		int kont =0;

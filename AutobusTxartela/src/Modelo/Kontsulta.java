@@ -191,7 +191,7 @@ public class Kontsulta {
 	
 	//AUTOBUSAREN DATUAK GORDE
 	
-	public static  double autobusa(String linea) {
+	public static  double autobusKontsumoa(String linea) {
 	
 	
 		
@@ -226,6 +226,40 @@ public class Kontsulta {
 		
 		return kontsumo;	
 	}
+	
+	
+	
+	//AUTOBUSAREN PERTSONA KANTITATEA LORTU
+
+public static  double autobusPertsonaKantitatea(String linea) {
+	Connection conexion = null;
+	Statement s = null;
+	int Cod_Bus = MetodoakVista.bus_lortu(linea);
+	double pertsonaKantitate = 0;
+
+	try {
+		// Cargar el driver
+		Class.forName("com.mysql.jdbc.Driver");
+		conexion = DriverManager.getConnection("jdbc:mysql://localhost/ethazi3", "root", "");
+		s = (Statement) conexion.createStatement();
+
+		// Se realiza la consulta. Los resultados se guardan en el ResultSet rs
+
+		ResultSet rs = ((java.sql.Statement) s).executeQuery("SELECT N_plazas FROM  autobus where Cod_bus like 'Cod_Bus'"); //select atera nahi ditudan datuak
+		
+		while (rs.next()) {
+			pertsonaKantitate = rs.getDouble(2);
+		
+		}
+		
+	} catch (Exception e) {
+		
+		System.out.println(e.getMessage());
+	}
+	
+	return pertsonaKantitate;	
+}
+
 
 	
 

@@ -77,7 +77,7 @@ public class MetodoakVista {
 	}
 	
 	public static void getLinea(String linea) {
-		Kontsulta.autobusa(linea);
+		Kontsulta.autobusKontsumoa(linea);
 	}
 
 	

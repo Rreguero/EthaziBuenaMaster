@@ -13,6 +13,7 @@ import javax.swing.JLabel;
 import javax.swing.JRadioButton;
 import javax.swing.JTextField;
 
+import Controlador.Metodoak;
 import Controlador.MetodoakVista;
 
 public class Lineak extends JFrame {
@@ -80,7 +81,7 @@ public class Lineak extends JFrame {
 		ActionListener alBAtzera = new ActionListener() {
 			public void actionPerformed(ActionEvent arg0) {
 				MetodoakVista.bigarrenera();
-				
+				Metodoak.prezioaKalk(linea);
 				dispose();
 			}
 		};

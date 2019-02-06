@@ -247,17 +247,17 @@ public static boolean pasahitzaKomprobaketa() {
 	
 	//PREZIOA KALKULATZEKO METODOA
 	
-	/*public static void prezioaKalk(String linea) {
-		
+	public static void prezioaKalk(String linea) {
+		System.out.println(linea+"rocio");
 		double distantzia = haversineMetodo(); //metodoaren balioa artzen du
-		double kontsumoa = Kontsulta.autobusa(linea);  //artu behar dugu datu basetik
+		double kontsumoa = Kontsulta.autobusKontsumoa(linea);  //artu behar dugu datu basetik
 		double erabilitakoLitroak; //bidaian erabili diren litroak
 		final double gasolinaPrezioa = 0.80; //beti berdina gasolinaren prezioa da
 		double kmPrezioa;// formulatik ateratzen da egindako km guztien prezioa
 		final double onura = 0.20; //beti berdina emprezak ezartzen duen onura
 		double empresaOnura;//formulatik ateratzen da empresaren onurarekin
 		double prezioGlobala; // autobus guztiak batera ordaindu behar duena
-		double pertsonaKantitate;//autobusean dauden pertsuna kant datubasetik ateratzen da
+		double pertsonaKantitate = Kontsulta.autobusPertsonaKantitatea(linea);//autobusean dauden pertsuna kant datubasetik ateratzen da
 		double prezioFinala;//pertsuna bakoitzak ordaindu behar duena
 		
 		//FORMULA
@@ -272,7 +272,9 @@ public static boolean pasahitzaKomprobaketa() {
 		System.out.println("zure billetearen prezioa :"+ prezioFinala + " € koa da");
 		
 		
-	}*/
+	}
+	
+	
 	
 	
 
